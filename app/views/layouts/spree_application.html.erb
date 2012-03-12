@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+  <head data-hook="inside_head">
+    <%= render 'shared/head' %>
+  </head>
+  <body>
+    <div id= "header">
+		<div id= "fondoHeader">
+
+			<div id= "logo">
+				<%= image_tag "store/logo.png" %>
+			</div>
+
+			<div id="espacio">		
+			</div>
+
+			   <div id= "redes">
+			   	   <ul>
+	                 <li><%= image_tag "store/facebook.png" %></li>
+	                 <li><%= image_tag "store/twitter.png" %></li>
+	               </ul>
+		   	   </div>
+
+			   <div id= "registro">
+			  	   <ul>
+	                 <li>Registro</li>
+	                 <li>|</li>
+	                 <li>Iniciar Cesion</li>
+	               </ul>
+			   </div>
+		   </div>
+	</div>
+	
+	<div id= "menu">
+	   	<ul>
+          <li>Inicio</li>
+          <li>Productos</li>
+          <li>Marcas</li> 
+          <li>Contacto</li>
+        </ul>
+	</div>
+<div id= "clear"></div>
+<%= yield :sidebar %>
+     <div id= "contenido">
+	   <%= yield %>
+ 	 </div>
+
+    <div id= "footer">
+		<div id= "fondoFooter">
+			<p>Términos de derechos reservados.</p>
+			<div id= "menuInferior">
+			   	<ul>
+		          <li>Inicio</li>
+		          <li>|</li>
+		          <li>Productos</li>
+		          <li>Marcas</li> 
+		          <li>Contacto</li>
+		        </ul>
+			</div>
+		</div>
+	</div>
+    <%= render 'shared/google_analytics' %>
+  </body>
+</html>
